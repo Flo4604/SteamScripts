@@ -11,7 +11,7 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const CONSTANTS = {
-    SLEEP_TIME: 15000,
+    SLEEP_TIME: 75,
     MAX_CRAFTS: 100 // Changes this to the amount of booster packs you want to craft
 };
 
