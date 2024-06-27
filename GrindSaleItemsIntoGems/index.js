@@ -46,8 +46,7 @@ const sales = {
 const timeout = 225; // ms (Changed by Nivq & Flo, works fine for 350k+ inventory)
 
 let assetIDsToGrind = [];
-let salesToGrind = [];„
-
+let salesToGrind = [];
 let modal = null;
 
 let grinded = 0;
@@ -110,10 +109,11 @@ function GrindAssetID(appId, assetId, currentIndex) {
       modal = ShowBlockingWaitDialog(
         "Grinding",
         '<div style="display: inline-block;margin-left: 20px;">' +
-        `Grinding items: <span style="color:#b698cc;">${errored + grinded}</span>/<span style="color: lightseagreen;">${limit}</span>${errored
-          ? `<br>Failed: <span style="color:#d25d67;">${errored}</span>`
-          : ""
-        }</div>`,
+          `Grinding items: <span style="color:#b698cc;">${errored + grinded}</span>/<span style="color: lightseagreen;">${limit}</span>${
+            errored
+              ? `<br>Failed: <span style="color:#d25d67;">${errored}</span>`
+              : ""
+          }</div>`,
       );
 
       if (grinded + errored == limit) {
@@ -126,10 +126,11 @@ function GrindAssetID(appId, assetId, currentIndex) {
           `Successfully grinded: <span style="color: lightseagreen;">${grinded} item${grinded == 1 ? "" : "s"}</span>
                     <br>Gems earned: <span style="color: lightseagreen;">${grinded * 100} <span style="color:#d25d67;">(+${errored * 100})</span></span>
                     <br>Time passed: <span style="color: lightseagreen;">${timePassed}</span>
-                    <br>Percentage of successful requests: <span style="color: lightseagreen;">${+`${Math.round(`${grinded / limit}e+4`)}e-2`}%</span>${errored
-            ? `<br><br><span style="color:#d25d67;">Failed ${errored} request${errored == 1 ? "" : "s"}. Check console log for more info`
-            : ""
-          }`,
+                    <br>Percentage of successful requests: <span style="color: lightseagreen;">${+`${Math.round(`${grinded / limit}e+4`)}e-2`}%</span>${
+                      errored
+                        ? `<br><br><span style="color:#d25d67;">Failed ${errored} request${errored == 1 ? "" : "s"}. Check console log for more info`
+                        : ""
+                    }`,
           "OK",
           "Close",
           "Made by Luty, modified by Flo4604",
@@ -214,8 +215,8 @@ function FetchAssetIDs(start = 0) {
         modal = ShowConfirmDialog(
           "Items fetched",
           `Found <span style="color:#b698cc;">${assetIDsToGrind.length}</span> sale items!` +
-          "<br><br>Limit grinding" +
-          '<input type="number" id="items_limit" style="margin-left: 20px;"><br><br>',
+            "<br><br>Limit grinding" +
+            '<input type="number" id="items_limit" style="margin-left: 20px;"><br><br>',
           assetIDsToGrind.length > 0 ? "Start" : "OK",
           "Exit",
         ).done(() => {
@@ -233,10 +234,11 @@ function FetchAssetIDs(start = 0) {
               modal = ShowBlockingWaitDialog(
                 "Grinding",
                 '<div style="display: inline-block;margin-left: 20px;">' +
-                `Grinding items: <span style="color:#b698cc;">${errored + grinded}</span>/<span style="color: lightseagreen;">${limit}</span>${errored
-                  ? `<br>Failed: <span style="color:#d25d67;">${errored}</span>`
-                  : ""
-                }</div>`,
+                  `Grinding items: <span style="color:#b698cc;">${errored + grinded}</span>/<span style="color: lightseagreen;">${limit}</span>${
+                    errored
+                      ? `<br>Failed: <span style="color:#d25d67;">${errored}</span>`
+                      : ""
+                  }</div>`,
               );
               // weird code
               if (limit !== assetIDsToGrind.length) {
