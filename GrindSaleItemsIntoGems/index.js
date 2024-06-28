@@ -8,9 +8,8 @@
 // @match        https://steamcommunity.com/*/*/inventory*
 // @match        https://steamcommunity.com/*/*/inventory/
 // @icon         https://cdn.steamsets.com/logo.ico
-// @updateUrl    https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.meta.js
-// @downloadUrl  https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
-// @updateUrl
+// @updateURL    https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.meta.js
+// @downloadURL  https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
 // ==/UserScript==
 
 const sales = {
