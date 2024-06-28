@@ -10,6 +10,9 @@
 // @icon         https://cdn.steamsets.com/logo.ico
 // @updateURL    https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.meta.js
 // @downloadURL  https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
+// @source       https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
+// @homepage     https://steamsets.com
+// @website      https://steamsets.com
 // ==/UserScript==
 
 const sales = {

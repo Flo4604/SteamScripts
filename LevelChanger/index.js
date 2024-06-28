@@ -7,16 +7,24 @@
 // @match        https://steamcommunity.com/groups/*
 // @match        https://steamcommunity.com/gid/*
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
-// @version 0.0.3
-// @namespace https://greasyfork.org/users/745018
+// @version      1.0.0
+// @namespace    steam
+// @icon         https://cdn.steamsets.com/logo.ico
+// @updateURL    https://github.com/SteamSets/SteamScripts/LevelChanger/index.meta.js
+// @downloadURL  https://github.com/SteamSets/SteamScripts/LevelChanger/index.js
+// @source       https://github.com/SteamSets/SteamScripts/LevelChanger/index.js
+// @homepage     https://steamsets.com
+// @website      https://steamsets.com
 // ==/UserScript==
 
 $(document).ready(function () {
-
   const url = $(location).attr("href");
-  let group, lvl_badge,lvl_number,background_url;
+  let group, lvl_badge, lvl_number, background_url;
   // alert(url.startsWith('https://steamcommunity.com/profiles/') || url.startsWith('https://steamcommunity.com/id/'))
-  if(url.startsWith('https://steamcommunity.com/profiles/') || url.startsWith('https://steamcommunity.com/id/')) {
+  if (
+    url.startsWith("https://steamcommunity.com/profiles/") ||
+    url.startsWith("https://steamcommunity.com/id/")
+  ) {
     var profileHTML = $(`
       <label for="custom_level_input"> Custom level badge:</label> <br />
       <input type="text" id="custom_level_input" /><a id="set_custom_level"> Set Level </a><br /a>
@@ -29,8 +37,8 @@ $(document).ready(function () {
 
     lvl_badge = $("div > .friendPlayerLevel")[0];
     lvl_number = $(".friendPlayerLevelNum")[0];
-    profilePicture =  $(".playerAvatarAutoSizeInner")[0];
-    background_url = $(".no_header")
+    profilePicture = $(".playerAvatarAutoSizeInner")[0];
+    background_url = $(".no_header");
 
     $("#set_custom_level")[0].onclick = setLevel;
     $("#custom_level_input")[0].onchange = function (e) {
@@ -46,21 +54,23 @@ $(document).ready(function () {
     $("#custom_profile_input")[0].onchange = function (e) {
       setProfilePicture(e.target.value);
     };
-
-  } else if(url.startsWith('https://steamcommunity.com/groups/') || url.startsWith('https://steamcommunity.com/gid/')) {
+  } else if (
+    url.startsWith("https://steamcommunity.com/groups/") ||
+    url.startsWith("https://steamcommunity.com/gid/")
+  ) {
     var groupHTML = $(`
       <label for="custom_picture_input"> Custom Picture badge:</label> <br />
       <input type="text" id="custom_picture_input" /><a id="set_custom_picture"> Set Picture </a><br /a>
     `);
     $("div > .group_summary").append(groupHTML);
-    group = $(".grouppage_logo")[0]
+    group = $(".grouppage_logo")[0];
 
-    $("#set_custom_picture")[0].onclick = setGroupPicture
+    $("#set_custom_picture")[0].onclick = setGroupPicture;
     $("#custom_picture_input")[0].onchange = function (e) {
       setGroupPicture(e.target.value);
     };
   } else {
-    alert('no')
+    alert("no");
   }
 
   function setCharAt(str, index, chr) {
@@ -69,31 +79,31 @@ $(document).ready(function () {
 
   function setGroupPicture(val) {
     val = typeof val == "string" ? val : $("#custom_picture_input")[0].value;
-    if (!val.match(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i) || !val){
-        return ($("#custom_picture_input")[0].value = "");
+    if (!val.match(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i) || !val) {
+      return ($("#custom_picture_input")[0].value = "");
     }
-    group.firstElementChild.src = val
+    group.firstElementChild.src = val;
   }
 
   function setBackground(val) {
     val = typeof val == "string" ? val : $("#custom_background_input")[0].value;
     if (!val.match(/(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)/g) || !val) {
-       return ($("#custom_background_input")[0].value = "");
+      return ($("#custom_background_input")[0].value = "");
     }
     background_url.css("background-image", "url(" + val + ")");
   }
   function setProfilePicture(val) {
     val = typeof val == "string" ? val : $("#custom_profile_input")[0].value;
     if (!val.match(/(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)/g) || !val) {
-       return ($("#custom_profile_input")[0].value = "");
+      return ($("#custom_profile_input")[0].value = "");
     }
-    profilePicture.firstElementChild.src = val
+    profilePicture.firstElementChild.src = val;
   }
   function setLevel(val) {
     val = typeof val == "string" ? val : $("#custom_level_input")[0].value;
 
     if (val.match(/\D/gm) && isNaN(Number(val))) {
-      return $("#custom_level_input")[0].value = "";
+      return ($("#custom_level_input")[0].value = "");
     }
 
     lvl_number.innerText = val;
