@@ -23,7 +23,6 @@ const sales = {
     winter: 991980,
   },
   2019: {
-    // lol didn't we really have any things?
     summer: null,
     winter: 1195670,
   },
@@ -37,7 +36,6 @@ const sales = {
   },
   2022: {
     summer: 2021850,
-    // MrSteakPotato
     winter: 2243720,
   },
   2023: {
