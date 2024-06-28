@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         Grind Sale Items Into Gems
 // @namespace    steam
-// @version      1.2.1
+// @version      1.2.2
 // @description  Choose how many and what sale items you want to grind into gems in few clicks
-// @author       Flo4604, oroginal by Lutymane
+// @author       Flo4604, original by Lutymane
 // @license MIT
 // @match        https://steamcommunity.com/*/*/inventory*
 // @match        https://steamcommunity.com/*/*/inventory/
 // @icon         https://cdn.steamsets.com/logo.ico
-// @updateURL    https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.meta.js
-// @downloadURL  https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
-// @source       https://github.com/SteamSets/SteamScripts/GrindSaleItemsIntoGems/index.js
+// @updateURL    https://github.com/SteamSets/SteamScripts/raw/main/GrindSaleItemsIntoGems/index.meta.js
+// @downloadURL  https://github.com/SteamSets/SteamScripts/raw/main/GrindSaleItemsIntoGems/index.js
+// @source       https://github.com/SteamSets/SteamScripts/raw/main/GrindSaleItemsIntoGems/index.js
 // @homepage     https://steamsets.com
 // @website      https://steamsets.com
 // ==/UserScript==

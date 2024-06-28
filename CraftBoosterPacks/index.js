@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Create Booster for all Appids
-// @version      1.0.0
+// @version      1.0.1
 // @description  Steam stuff
 // @author       https://github.com/Flo4604
 // @match        https://steamcommunity.com/tradingcards/boostercreator*
 // @icon         https://cdn.steamsets.com/logo.ico
-// @updateURL    https://github.com/SteamSets/SteamScripts/CraftBoosterPacks/index.meta.js
-// @downloadURL  https://github.com/SteamSets/SteamScripts/CraftBoosterPacks/index.js
+// @updateURL    https://github.com/SteamSets/SteamScripts/raw/main/CraftBoosterPacks/index.meta.js
+// @downloadURL  https://github.com/SteamSets/SteamScripts/raw/main/CraftBoosterPacks/index.js
 // @grant        none
 // @namespace    steam
-// @source       https://github.com/SteamSets/SteamScripts/CraftBoosterPacks/index.js
+// @source       https://github.com/SteamSets/SteamScripts/raw/main/CraftBoosterPacks/index.js
 // @homepage     https://steamsets.com
 // @website      https://steamsets.com
 // @license MIT

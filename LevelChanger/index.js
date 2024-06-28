@@ -7,12 +7,12 @@
 // @match        https://steamcommunity.com/groups/*
 // @match        https://steamcommunity.com/gid/*
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
-// @version      1.0.0
+// @version      1.0.1
 // @namespace    steam
 // @icon         https://cdn.steamsets.com/logo.ico
-// @updateURL    https://github.com/SteamSets/SteamScripts/LevelChanger/index.meta.js
-// @downloadURL  https://github.com/SteamSets/SteamScripts/LevelChanger/index.js
-// @source       https://github.com/SteamSets/SteamScripts/LevelChanger/index.js
+// @updateURL    https://github.com/SteamSets/SteamScripts/raw/main/LevelChanger/index.meta.js
+// @downloadURL  https://github.com/SteamSets/SteamScripts/raw/main/LevelChanger/index.js
+// @source       https://github.com/SteamSets/SteamScripts/raw/main/LevelChanger/index.js
 // @homepage     https://steamsets.com
 // @website      https://steamsets.com
 // ==/UserScript==
