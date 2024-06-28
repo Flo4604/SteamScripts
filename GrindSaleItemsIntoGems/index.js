@@ -14,6 +14,10 @@
 // ==/UserScript==
 
 const sales = {
+  2017: {
+    summer: 639900,
+    winter: 762800,
+  },
   2018: {
     summer: 876740,
     winter: 991980,
@@ -23,7 +27,10 @@ const sales = {
     summer: null,
     winter: 1195670,
   },
-  // TODO (Nivq)
+  2020: {
+    summer: 1343890,
+    winter: 1465680,
+  },
   2021: {
     summer: 1658760,
     winter: 1797760,
@@ -41,9 +48,6 @@ const sales = {
     summer: 2861690,
     winter: null,
   },
-  // NEED TO ADD
-  // 2022 summer
-  // 2020-2021 winter
 };
 
 const timeout = 225; // ms (Changed by Nivq & Flo, works fine for 350k+ inventory)
